@@ -50,8 +50,10 @@ import json  # We need this tool to read the external file
 #     variable_name = json.load(file)
 #
 # Write your code below:
+with open('books.json', 'r') as file:
+    variable_name = json.load(file)
 
-
+print(variable_name)
 
 
 # -------------------------------------------
@@ -89,8 +91,20 @@ import json  # We need this tool to read the external file
 # Write your code below:
 # NOTE: This loop will become the "home" for all your future code!
 
+choice = 0
+while choice != 3:
+    print("--- BOOK INVENTORY ---")
+    print("1. View All Books")
+    print("2. Search for Book")
+    print("3. Exit")
 
-
+    choice = int(input("Enter your choice? "))
+    if(choice == 3):
+        print("Goodbye!")
+    elif(choice == 2):
+        print("invalid choice")
+    else:
+         print("we will add real features later")       
 
 # -------------------------------------------
 # CHECKPOINT
