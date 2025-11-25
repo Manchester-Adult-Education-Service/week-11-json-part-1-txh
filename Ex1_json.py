@@ -92,19 +92,19 @@ print(variable_name)
 # NOTE: This loop will become the "home" for all your future code!
 
 choice = 0
-while choice != 3:
-    print("--- BOOK INVENTORY ---")
-    print("1. View All Books")
-    print("2. Search for Book")
-    print("3. Exit")
+# while choice != 3:
+#     print("--- BOOK INVENTORY ---")
+#     print("1. View All Books")
+#     print("2. Search for Book")
+#     print("3. Exit")
 
-    choice = int(input("Enter your choice? "))
-    if(choice == 3):
-        print("Goodbye!")
-    elif(choice == 2):
-        print("invalid choice")
-    else:
-         print("we will add real features later")       
+#     choice = int(input("Enter your choice? "))
+#     if(choice == 3):
+#         print("Goodbye!")
+#     elif(choice == 2):
+#         print("invalid choice")
+#     else:
+#          print("we will add real features later")       
 
 # -------------------------------------------
 # CHECKPOINT
@@ -143,6 +143,24 @@ while choice != 3:
 #
 # (Modify the code in Task 2 - Do not write new code here)
 # -------------------------------------------
+choice = 0
+while choice != 3:
+    print("--- BOOK INVENTORY ---")
+    print("1. View All Books")
+    print("2. Search for Book")
+    print("3. Exit")
+
+    choice = int(input("Enter your choice? "))
+    
+    if(choice == 3):
+        print("Goodbye!")
+    elif(choice == 2):
+        print("invalid choice")
+    elif (choice == 1):
+        for book in variable_name:
+            print(f"Title: {book["title"]} | Author : {book["author"]} | Stock  {book["stock"]}")
+    else:
+         print("we will add real features later")       
 
 
 # -------------------------------------------
